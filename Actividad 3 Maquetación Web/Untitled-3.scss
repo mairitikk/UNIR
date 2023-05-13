@@ -1,0 +1,47 @@
+
+$color-dark: #262626;
+$color-black: #000;
+$color-primary: #d3ab55;
+
+@mixin flexLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@include flexLayout;
+.heading-container{
+    display: flex;
+    flex-direction: row;
+   
+}
+.title{
+    flex-grow: 4;
+    font-size: 24px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 12px;
+}
+
+.menu-link{
+    text-decoration: none;
+}
+
+.menu-button{
+    border:1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    background-color: #09f;
+    font-family: inherit;
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    padding: 6px 16px;
+}
+
+<hr  1px solid #eaeaea>  
+<hr  1px solid #eaeaea>  

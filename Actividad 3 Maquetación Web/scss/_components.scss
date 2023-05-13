@@ -130,9 +130,40 @@
     }
 
     #fname{
-        padding: 5px;
-        padding-right: 20px;
-        border-color: rgb(210, 201, 201);
+        padding: 10px;
+        padding-right: 60px;
+        border-color: rgb(255, 255, 255);
         border-radius: 5px;
         border: 1px solid;
+        margin-top: 5px;
     }
+    #email{
+        padding: 10px;
+        padding-right: 60px;
+        border-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border: 1px solid;
+        margin-top: 5px;
+    }
+    .email-adress{
+        margin-top: 10px;
+    }
+.enviar{
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: rgba(7, 124, 202, 0.81);
+    font-family: inherit;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 12px;
+    display: inline-block;
+}
+
+.copyright{
+  margin: 30px 0;
+   display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+}
