@@ -1,0 +1,138 @@
+.title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.menu-list {
+    padding: 15px;
+    font-size: 16px;
+    margin: auto;
+}
+.menu-link {
+    color: black;
+    font-weight: 300;
+}
+.menu-button {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 14px;
+}
+
+.main-img--size {
+    background-color: rgb(46, 208, 5);
+    font-size: 12px;
+    padding: 5px;
+    color: white;
+    position: relative;
+    top: 42px;
+    left: 28px;
+}
+.oferta {
+    margin-top: 20px;
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+.titel-ifhone {
+    font-size: 36px;
+    margin: 0;
+}
+.main-article-text {
+    font-size: 19px;
+}
+
+.precio {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+.button-buy {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    background-color: rgba(7, 124, 202, 0.81);
+    font-family: inherit;
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px;
+    display: inline-block;
+}
+.icon {
+    font-size: 24px;
+    font-weight: bolder;
+}
+.accesorios-heading {
+    font-size: 34px;
+}
+.main-accessories-heading {
+    font-size: 22px;
+}
+.main-accesorios-info {
+    line-height: 1.5;
+}
+
+.main-accesorios-oferta {
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: rgba(205, 28, 28, 0.905);
+    font-family: inherit;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 12px;
+    display: inline-block;
+}
+.main-accessories-heading-2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.main-accessories-nuevo {
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: rgba(7, 124, 202, 0.81);
+    font-family: inherit;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 12px;
+    display: inline-block;
+}
+.sorteo {
+    margin: 30px 90px;
+    background-color: rgb(242, 251, 251);
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+
+    &-heading {
+        font-size: 48px;
+        margin-top: 0px;
+    }
+    &-container {
+        margin-right: 80px;
+    }
+    &-info {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    
+}
+.container-form {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-right: 20px;
+        
+    }
+
+    #fname{
+        padding: 5px;
+        padding-right: 20px;
+        border-color: rgb(210, 201, 201);
+        border-radius: 5px;
+        border: 1px solid;
+    }
