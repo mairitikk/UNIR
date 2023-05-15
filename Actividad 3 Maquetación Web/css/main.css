@@ -114,53 +114,44 @@ hr {
   display: inline-block; }
 
 .sorteo {
-  margin: 30px 90px;
+  margin: 30px 70px;
   background-color: #f2fbfb;
   display: flex;
   flex-direction: row;
-  padding: 60px; }
+  padding: 60px;
+  gap: 30px; }
   .sorteo-heading {
     font-size: 48px;
     margin-top: 0px; }
-  .sorteo-container {
-    margin-right: 80px; }
   .sorteo-info {
     font-size: 18px;
     line-height: 1.5; }
 
-.container-form {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-right: 20px; }
-
 #fname {
-  padding: 10px;
-  padding-right: 60px;
-  border-color: white;
-  border-radius: 5px;
-  border: 1px solid;
-  margin-top: 5px; }
+  padding: 12px 60px 12px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; }
 
 #email {
-  padding: 10px;
-  padding-right: 60px;
-  border-color: white;
-  border-radius: 5px;
-  border: 1px solid;
-  margin-top: 5px; }
-
-.email-adress {
-  margin-top: 10px; }
+  padding: 12px 60px 12px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; }
 
 .enviar {
-  border: 1px solid;
+  border: 1px solid black;
   border-radius: 6px;
   background-color: rgba(7, 124, 202, 0.81);
   font-family: inherit;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
-  padding: 10px 12px;
+  padding: 15px 17px;
   display: inline-block; }
 
 .copyright {
@@ -175,7 +166,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  margin: 0px 90px 0px; }
+  margin: 0px 70px 0px; }
 
 .menu {
   display: flex;
@@ -184,8 +175,8 @@ hr {
 .main-container {
   display: inline-flex;
   margin-top: 14px;
-  margin-left: 90px;
-  margin-right: 90px; }
+  margin-left: 70px;
+  margin-right: 70px; }
 
 .main-row1 {
   margin-right: 30px; }
@@ -214,8 +205,8 @@ hr {
   padding-left: 20px; }
 
 .accesorios {
-  margin-left: 90px;
-  margin-right: 90px; }
+  margin-left: 70px;
+  margin-right: 70px; }
 
 .accesorios-container {
   display: flex;
