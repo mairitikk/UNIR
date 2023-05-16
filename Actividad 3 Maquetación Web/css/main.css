@@ -14,7 +14,7 @@ body {
   margin: 0;
   border-style: solid;
   border-width: 1px;
-  color: color(primary); }
+  color: #f5f2f2; }
 
 .title {
   font-size: 20px;
@@ -26,13 +26,13 @@ body {
   margin: auto; }
 
 .menu-link {
-  color: color(secondary);
+  color: #000;
   font-weight: 300; }
 
 .menu-button {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 6px;
-  background-color: color(tertiary);
+  background-color: #fff;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
@@ -42,7 +42,7 @@ body {
   background-color: #2ed005;
   font-size: 12px;
   padding: 5px;
-  color: white;
+  color: #fff;
   position: relative;
   top: 42px;
   left: 28px; }
@@ -67,7 +67,7 @@ body {
   border-radius: 6px;
   background-color: rgba(7, 124, 202, 0.81);
   font-family: inherit;
-  color: white;
+  color: #fff;
   font-size: 16px;
   line-height: 1;
   padding: 16px;
@@ -89,9 +89,9 @@ body {
 .button-oferta {
   border: 1px solid;
   border-radius: 6px;
-  background-color: rgba(205, 28, 28, 0.905);
+  background-color: red;
   font-family: inherit;
-  color: white;
+  color: #fff;
   font-size: 14px;
   line-height: 1;
   padding: 10px 12px;
@@ -102,7 +102,7 @@ body {
   border-radius: 6px;
   background-color: rgba(7, 124, 202, 0.81);
   font-family: inherit;
-  color: white;
+  color: #fff;
   font-size: 14px;
   line-height: 1;
   padding: 10px 12px;
@@ -144,11 +144,11 @@ body {
   margin-top: 20px; }
 
 .enviar {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 6px;
   background-color: rgba(7, 124, 202, 0.81);
   font-family: inherit;
-  color: white;
+  color: #fff;
   font-size: 16px;
   line-height: 1;
   padding: 15px 17px;
