@@ -12,7 +12,7 @@
     <title>agoodshop</title>
   </head>
   <body>
-    <!--header: titulo de la página y el menu-->
+    <!--header: titulo de la página y el menu de navegacion-->
     <header class="header-container">
       
       <!--h1: titulo-->
@@ -27,36 +27,42 @@
         </nav>
     
     </header>
-     
-    <hr  1px solid #eaeaea>
+    <!--un corte temático-->
+    
+    <hr class="linia-corte">
+
      <!--main: contenido printsipal-->
+     <main class="main-content">
+      <!--container mantiene el contenido unido-->
     <div class="main-container">
-      <!--main sector figur-->
+      <!--la primera parte del contenido de la main-->
       <div class="main-row1">
-          
+          <!--foto de la main contenido -->
           <span class="main-img--size">128gb</span>
-          <img class="img-ifhone" src="https://placehold.jp/450x450.png" alt="iFhone 13 Pro">
+          <img class="main-img-ifhone" src="https://placehold.jp/450x450.png" alt="iFhone 13 Pro">
         </div>
-      <!--main sector content-->
       
-      <div class="main-row1-column2">
-       
-        <header class="main-article-header">
+      <!--contenido de la main-->
+      <div class="main-row2">
+       <!--titulo de contenido printsipal-->
+        <header >
           <p class="oferta">OFERTA</p>
         <h1 class="titel-ifhone">Compra un iFhone 13 Pro</h1>
         </header>
-        
-       <p class="main-article-main--info">
+        <!--info del contenido-->
+       <p>
         iFhone 13: Tu nuevo superpoder. Nuestro sistema de cámara dual más avanzado. El chip que hace morder el polvo a la competencia. Un subidón de autonomía que vaya si notarás. Ceramic Shield, más duro que cualquier vidrio de smartphone.
        </p>
-       <p class="main-article-main--info">
+       <p>
         Pantalla Super Retina XDR de 6,1 pulgadas. Diseño robusto con bordes planos y resistente al agua.
        </p>
-       <div class="hind">
+       <!--main contenido precio y comprar boton-->
+       <div class="comprar">
         <h2 class="precio">938,99€</h2>
-        <button class="button-buy">Comprar</button>
+        <button class="button-comprar">Comprar</button>
         </div>
       
+      <!--footer de la main contenido-->
          <footer class="main-article-footer">
           <ul class="main-articel-footer-list">
             <li class="main-articel-footer-list-item">
@@ -75,72 +81,78 @@
         </footer>
       </div>
   </div>
+</main>
 
+<!--section para accesorios-->
 
       <section class="accesorios">
+        <!--titulo para accesorios section-->
         <header>
           <h2 class="accesorios-heading">Accesorios recomendados</h2>
         </header>
+        <!--container para accesorios section-->
         <div class="accesorios-container">
-       
+       <!--foto para accesorio container-->
           <div class="card">
           
             <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
-         
+         <!--titulo y contenido para accesorios section-->
           <div class="card-body">
-          <h3 class="main-accessories-heading">Cargador</h3>
-          <p class="main-accesorios-info">
+          <h3 class="card-heading">Cargador</h3>
+          <p class="card-info">
             El adaptador de corriente USB-C de 20 W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.
           </p>
         </div>
           </div>
-       
+       <!--foto para accesorio container-->
           <div class="card">
           
             <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
-          
+          <!--titulo y contenido para accesorios section-->
           <div class="card-body">
-          <h3 class="main-accessories-heading-2">Base de carga inalámbrica</h3>
-          <button class="main-accesorios-oferta">Oferta</button>
-          <p class="main-accesorios-info">
+          <h3 class="card-heading">Base de carga inalámbrica</h3>
+          <button class="button-oferta">Oferta</button>
+          <p class="card-info">
             Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga rápida de 20W.
           </p>
         </div>
         </div>
         
-        
+        <!--foto para accesorio container-->
           <div class="card">
           
             <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
-          
+          <!--titulo y contenido para accesorios section-->
           <div class="card-body">
-          <h3 class="main-accessories-heading">Funda piel</h3>
-          <p class="main-accesorios-info">
+          <h3 class="card-heading">Funda piel</h3>
+          <p class="card-info">
             Fabricadas en piel europea curtida y teñida con un proceso especial, son suaves al tacto y adquieren un tono natural con el tiempo. Los botones de aluminio combinan a la perfección con el acabado de la piel. 
           </p>
         </div>
         </div>
         
-        
+        <!--foto para accesorio container-->
           <div class="card">
           
             <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
-          
+          <!--titulo y contenido para accesorios section-->
           <div class="card-body">
-          <h3 class="main-accessories-heading-2">Cargador</h3>
-          <button class="main-accessories-nuevo">Nuevo</button>
-          <p class="main-accesorios-info">
+          <h3 class="card-heading">Cargador</h3>
+          <button class="button-nuevo">Nuevo</button>
+          <p class="card-info">
             El adaptador de corriente USB-C de 20 W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.
           </p>
         </div>
         </div>
       </section>
-    
+    <!--section aparte de main y section contenido-->
       <aside class="sorteo">
         <div class="sorteo-container">
+          <!--titulo para sorteo -->
           <h1 class="sorteo-heading">
             Participa en el sorte de un iFhone 13
           </h1>
+          <!--contenido de sorteo-->
           <p class="sorteo-info">
             Este verano, ¡venimos cargador de premios! Así que antes de irte de vacaciones, ¡participa en
             nuestro
@@ -151,20 +163,22 @@
         </p>
         
         </div>
+        <!--formulario para participar en sorteo-->
         <div class="container-form">
           <form action="/action_page.php">
           <label for="fname">Nombre</label><br>
           <input type="text" id="fname" name="fname" placeholder="Ari Gold"><br>
-          <label for="email">Email</label><br>
+          <label for="email" class="label-email">Email</label><br>
           <input type="text" id="email" name="email" placeholder="arigold@mga.com"><br><br>
           <input type="button" class="enviar" value="Enviar">
          </form>
         </div>
       </aside>
-   
-      <hr  1px solid #eaeaea>
+   <!--un corte temático-->
+      <hr class="linia-corte">
+      <!--fin del pagina-->
     <footer class="end">
-        <!-- Copyright Section-->
+        <!-- Sección de Copyright-->
        
             <div class="copyright"> &copy; agoodshop</div>
         

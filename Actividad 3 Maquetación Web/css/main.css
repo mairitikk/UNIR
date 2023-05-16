@@ -8,10 +8,13 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
-hr {
-  margin: 0; }
+.linia-corte {
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  color: color(primary); }
 
 .title {
   font-size: 20px;
@@ -23,14 +26,13 @@ hr {
   margin: auto; }
 
 .menu-link {
-  color: black;
+  color: color(secondary);
   font-weight: 300; }
 
 .menu-button {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 6px;
-  background-color: white;
-  color: black;
+  background-color: color(tertiary);
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
@@ -55,15 +57,12 @@ hr {
   font-size: 36px;
   margin: 0; }
 
-.main-article-text {
-  font-size: 19px; }
-
 .precio {
   font-size: 36px;
   font-weight: bold;
   margin: 0; }
 
-.button-buy {
+.button-comprar {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   background-color: rgba(7, 124, 202, 0.81);
@@ -81,13 +80,13 @@ hr {
 .accesorios-heading {
   font-size: 34px; }
 
-.main-accessories-heading {
+.card-heading {
   font-size: 22px; }
 
-.main-accesorios-info {
+.card-info {
   line-height: 1.5; }
 
-.main-accesorios-oferta {
+.button-oferta {
   border: 1px solid;
   border-radius: 6px;
   background-color: rgba(205, 28, 28, 0.905);
@@ -98,11 +97,7 @@ hr {
   padding: 10px 12px;
   display: inline-block; }
 
-.main-accessories-heading-2 {
-  margin-bottom: 10px;
-  font-size: 22px; }
-
-.main-accessories-nuevo {
+.button-nuevo {
   border: 1px solid;
   border-radius: 6px;
   background-color: rgba(7, 124, 202, 0.81);
@@ -128,20 +123,25 @@ hr {
     line-height: 1.5; }
 
 #fname {
-  padding: 12px 60px 12px 5px;
+  padding: 12px 120px 12px 5px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 15px; }
 
 #email {
-  padding: 12px 60px 12px 5px;
+  padding: 12px 120px 12px 5px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 15px; }
+
+.label-email {
+  margin-top: 20px; }
 
 .enviar {
   border: 1px solid black;
@@ -172,16 +172,17 @@ hr {
   display: flex;
   flex-direction: row; }
 
+.main-content {
+  margin: 0px 70px; }
+
 .main-container {
   display: inline-flex;
-  margin-top: 14px;
-  margin-left: 70px;
-  margin-right: 70px; }
+  margin-top: 14px; }
 
 .main-row1 {
   margin-right: 30px; }
 
-.hind {
+.comprar {
   display: flex;
   flex-direction: row;
   gap: 24px;

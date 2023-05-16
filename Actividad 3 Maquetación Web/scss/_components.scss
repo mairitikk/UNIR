@@ -1,3 +1,9 @@
+.linia-corte{
+    margin: 0;
+    border-style: solid;
+    border-width: 1px;
+    color: color(primary);
+}
 .title {
     font-size: 20px;
     font-weight: bolder;
@@ -8,14 +14,14 @@
     margin: auto;
 }
 .menu-link {
-    color: black;
+    color: color(secondary);
     font-weight: 300;
 }
 .menu-button {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 6px;
-    background-color: white;
-    color: black;
+    background-color: color(tertiary);
+    
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
@@ -41,16 +47,14 @@
     font-size: 36px;
     margin: 0;
 }
-.main-article-text {
-    font-size: 19px;
-}
+
 
 .precio {
     font-size: 36px;
     font-weight: bold;
     margin: 0;
 }
-.button-buy {
+.button-comprar {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 6px;
     background-color: rgba(7, 124, 202, 0.81);
@@ -68,14 +72,14 @@
 .accesorios-heading {
     font-size: 34px;
 }
-.main-accessories-heading {
+.card-heading {
     font-size: 22px;
 }
-.main-accesorios-info {
+.card-info {
     line-height: 1.5;
 }
 
-.main-accesorios-oferta {
+.button-oferta {
     border: 1px solid;
     border-radius: 6px;
     background-color: rgba(205, 28, 28, 0.905);
@@ -86,11 +90,8 @@
     padding: 10px 12px;
     display: inline-block;
 }
-.main-accessories-heading-2 {
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-.main-accessories-nuevo {
+
+.button-nuevo {
     border: 1px solid;
     border-radius: 6px;
     background-color: rgba(7, 124, 202, 0.81);
@@ -102,19 +103,19 @@
     display: inline-block;
 }
 .sorteo {
-    margin: 30px 90px;
+    margin: 30px 70px;
     background-color: rgb(242, 251, 251);
     display: flex;
     flex-direction: row;
     padding: 60px;
+    gap: 30px;
+    
 
     &-heading {
         font-size: 48px;
         margin-top: 0px;
     }
-    &-container {
-        margin-right: 80px;
-    }
+   
     &-info {
         font-size: 18px;
         line-height: 1.5;
@@ -122,41 +123,41 @@
 
     
 }
-.container-form {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-right: 20px;
-        
-    }
 
     #fname{
-        padding: 10px;
-        padding-right: 60px;
-        border-color: rgb(255, 255, 255);
-        border-radius: 5px;
-        border: 1px solid;
-        margin-top: 5px;
-    }
-    #email{
-        padding: 10px;
-        padding-right: 60px;
-        border-color: rgb(255, 255, 255);
-        border-radius: 5px;
-        border: 1px solid;
-        margin-top: 5px;
-    }
-    .email-adress{
-        margin-top: 10px;
-    }
+        
+        padding: 12px 120px 12px 5px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 15px;
+      }
+     #email{
+        
+        padding: 12px 120px 12px 5px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 15px;
+        
+     } 
+     .label-email{
+        margin-top: 20px;
+     }
+   
 .enviar{
-    border: 1px solid;
+    border: 1px solid black;
     border-radius: 6px;
     background-color: rgba(7, 124, 202, 0.81);
     font-family: inherit;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1;
-    padding: 10px 12px;
+    padding: 15px 17px;
     display: inline-block;
 }
 

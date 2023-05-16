@@ -4,23 +4,23 @@
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    margin: 0px 90px 0px;
+    margin: 0px 70px 0px;
 }
 .menu{
     display: flex;
     flex-direction: row;
 }
-
+.main-content{
+    margin: 0px 70px;}
 .main-container{
     display: inline-flex;
     margin-top: 14px;
-    margin-left: 90px;
-    margin-right: 90px;
+    
 }
 .main-row1{
     margin-right: 30px;
 }
-.hind{
+.comprar{
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -49,9 +49,10 @@
     padding-left: 20px;
 }
 
+
 .accesorios{
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 .accesorios-container{
     display: flex;
