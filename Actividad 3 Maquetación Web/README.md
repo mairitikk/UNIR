@@ -24,8 +24,8 @@ En la carpeta de **img** se encuentran test de maquetación.
 
 ### Mobile
 
-<img src="https://raw.githubusercontent.com/mairitikk/UNIR/main/Actividad%203%20Maquetaci%C3%B3n%20Web/img/mobile.jpeg" alt= “mobile image” height="400px">
+<img src="img/mobile.jpeg" height="400px" />
 
 ### Screen 
 
-<img src="https://raw.githubusercontent.com/mairitikk/UNIR/main/Actividad%203%20Maquetaci%C3%B3n%20Web/img/screen.jpeg" alt= “screen image” height="400px">
+<img src="img/screen.jpeg" height="400px" />
