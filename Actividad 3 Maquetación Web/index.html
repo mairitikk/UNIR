@@ -22,7 +22,7 @@
             <li class="menu-list"><a class="menu-link" href="#"> Tienda </a></li>
             <li class="menu-list"><a class="menu-link" href="#">Accesorios</a></li>
             <li class="menu-list"><a class="menu-link" href="#">Soporte</a></li>
-            <li class="menu-list"><button class="menu-button">Contactar</button></li>
+            <li class="menu-list"><button class="button-menu">Contactar</button></li>
           </ul>
         </nav>
     
@@ -38,8 +38,8 @@
       <!--la primera parte del contenido de la main-->
       <div class="main-row1">
           <!--foto de la main contenido -->
-          <span class="main-img--size">128gb</span>
-          <img class="main-img-ifhone" src="https://placehold.jp/450x450.png" alt="iFhone 13 Pro">
+          <span class="main-img-size">128gb</span>
+          <img class="card-img" src="https://placehold.jp/450x450.png" alt="iFhone 13 Pro">
         </div>
       
       <!--contenido de la main-->
@@ -59,7 +59,7 @@
        <!--main contenido precio y comprar boton-->
        <div class="comprar">
         <h2 class="precio">938,99€</h2>
-        <button class="button-comprar">Comprar</button>
+        <button class="button">Comprar</button>
         </div>
       
       <!--footer de la main contenido-->
@@ -70,7 +70,7 @@
               <p class="main-articel-footer-list-item-text"> Envio rapido, gratuito y sin contacto</p>
             </li>
             <li class="main-articel-footer-list-item">
-              <span class="lnr lnr-redo icon"></span>
+             <span class="lnr lnr-redo icon"></span>
               <p class="main-articel-footer-list-item-text">Devoluciones fáciles y gratuitas</p>
             </li>
             <li class="main-articel-footer-list-item">
@@ -95,7 +95,7 @@
        <!--foto para accesorio container-->
           <div class="card">
           
-            <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
+            <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de accesorio">
          <!--titulo y contenido para accesorios section-->
           <div class="card-body">
           <h3 class="card-heading">Cargador</h3>
@@ -107,11 +107,11 @@
        <!--foto para accesorio container-->
           <div class="card">
           
-            <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
+            <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de accesorio">
           <!--titulo y contenido para accesorios section-->
           <div class="card-body">
           <h3 class="card-heading">Base de carga inalámbrica</h3>
-          <button class="button-oferta">Oferta</button>
+          <button class="button button--oferta">Oferta</button>
           <p class="card-info">
             Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga rápida de 20W.
           </p>
@@ -121,12 +121,15 @@
         <!--foto para accesorio container-->
           <div class="card">
           
-            <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
+            <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de accesorio">
           <!--titulo y contenido para accesorios section-->
           <div class="card-body">
           <h3 class="card-heading">Funda piel</h3>
           <p class="card-info">
-            Fabricadas en piel europea curtida y teñida con un proceso especial, son suaves al tacto y adquieren un tono natural con el tiempo. Los botones de aluminio combinan a la perfección con el acabado de la piel. 
+            Fabricadas en piel europea curtida y teñida con un proceso especial, son suaves al tacto y adquieren un tono natural con el tiempo. 
+          </p>
+          <p class="card-info">
+            Los botones de aluminio combinan a la perfección con el acabado de la piel. 
           </p>
         </div>
         </div>
@@ -134,11 +137,11 @@
         <!--foto para accesorio container-->
           <div class="card">
           
-            <img src="https://placehold.jp/230x170.png" alt="foto de accesorio">
-          <!--titulo y contenido para accesorios section-->
+            <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de accesorio">
+          <!--titulo y contenido para accessorios section-->
           <div class="card-body">
           <h3 class="card-heading">Cargador</h3>
-          <button class="button-nuevo">Nuevo</button>
+          <button class="button button--nuevo">Nuevo</button>
           <p class="card-info">
             El adaptador de corriente USB-C de 20 W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.
           </p>
@@ -159,7 +162,7 @@
             sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13
         </p>
         <p class="sorteo-info">
-            Rellena este formulario para er uno de los afortunados.
+            Rellena este formulario para ser uno de los afortunados.
         </p>
         
         </div>
@@ -167,10 +170,10 @@
         <div class="container-form">
           <form action="/action_page.php">
           <label for="fname">Nombre</label><br>
-          <input type="text" id="fname" name="fname" placeholder="Ari Gold"><br>
+          <input type="text" id="fname" name="fname" class="input-text" placeholder="Ari Gold"><br>
           <label for="email" class="label-email">Email</label><br>
-          <input type="text" id="email" name="email" placeholder="arigold@mga.com"><br><br>
-          <input type="button" class="enviar" value="Enviar">
+          <input type="text" id="email" name="email" class="input-text" placeholder="arigold@mga.com"><br><br>
+          <input type="button" class="button button--enviar" value="Enviar">
          </form>
         </div>
       </aside>

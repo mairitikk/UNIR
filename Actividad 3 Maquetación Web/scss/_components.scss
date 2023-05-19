@@ -1,4 +1,4 @@
-.linia-corte{
+.linia-corte {
     margin: 0;
     border-style: solid;
     border-width: 1px;
@@ -10,25 +10,22 @@
 }
 .menu-list {
     padding: 15px;
-    font-size: 16px;
     margin: auto;
 }
 .menu-link {
     color: $color-black;
     font-weight: 300;
 }
-.menu-button {
+.button-menu {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 6px;
     background-color: $color-white;
-    
-    font-size: 16px;
     font-weight: 500;
     line-height: 1;
     padding: 14px;
 }
 
-.main-img--size {
+.main-img-size {
     background-color: $color-green;
     font-size: 12px;
     padding: 5px;
@@ -48,123 +45,115 @@
     margin: 0;
 }
 
-
 .precio {
     font-size: 36px;
     font-weight: bold;
     margin: 0;
 }
-.button-comprar {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+
+.icon {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.card {
+    border-style: solid;
+    border-width: 0.2px;
+    border-radius: 7px;
+    border-color: lightgray;
+    padding: 16px;
+}
+.accesorios-heading {
+    font-size: 34px;
+}
+.card-img {
+    width: 100%;
+    
+    @media (min-width: 768px) {
+        width: auto;
+        
+    }
+}
+
+.card-heading {
+    font-size: 22px;
+}
+
+.card-info {
+    line-height: 1.5;
+    
+}
+
+.button {
+    border: 1px solid;
     border-radius: 6px;
-    background-color: $color-secondary;
     font-family: inherit;
     color: $color-white;
     font-size: 16px;
     line-height: 1;
     padding: 16px;
     display: inline-block;
-}
-.icon {
-    font-size: 24px;
-    font-weight: bolder;
-}
-.accesorios-heading {
-    font-size: 34px;
-}
-.card-heading {
-    font-size: 22px;
-}
-.card-info {
-    line-height: 1.5;
-}
-
-.button-oferta {
-    border: 1px solid;
-    border-radius: 6px;
-    background-color: $color-red;
-    font-family: inherit;
-    color: $color-white;
-    font-size: 14px;
-    line-height: 1;
-    padding: 10px 12px;
-    display: inline-block;
-}
-
-.button-nuevo {
-    border: 1px solid;
-    border-radius: 6px;
     background-color: $color-secondary;
-    font-family: inherit;
-    color: $color-white;
+}
+.button--enviar {
+    padding: 15px 17px;
+}
+
+.button--oferta {
     font-size: 14px;
-    line-height: 1;
     padding: 10px 12px;
-    display: inline-block;
+    background-color: $color-red;
+}
+
+.button--nuevo {
+    font-size: 14px;
+    padding: 10px 12px;
+   
 }
 .sorteo {
-    margin: 30px 70px;
-    background-color: rgb(242, 251, 251);
+    margin: 20px 10px 0px;
+    background-color: $color-tertiary;
     display: flex;
     flex-direction: row;
-    padding: 60px;
     gap: 30px;
-    
+    flex-wrap: wrap;
+    padding: 30px;
+    @media (min-width: 768px) {
+        flex-wrap: nowrap;
+        margin: 30px 70px;
+        padding: 60px;
+    }
 
     &-heading {
         font-size: 48px;
         margin-top: 0px;
     }
-   
+
     &-info {
         font-size: 18px;
         line-height: 1.5;
     }
-
-    
 }
 
-    #fname{
-        
-        padding: 12px 120px 12px 5px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        box-sizing: border-box;
-        font-size: 15px;
-      }
-     #email{
-        
-        padding: 12px 120px 12px 5px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        box-sizing: border-box;
-        font-size: 15px;
-        
-     } 
-     .label-email{
-        margin-top: 20px;
-     }
-   
-.enviar{
-    border: 1px solid $color-black;
-    border-radius: 6px;
-    background-color: $color-secondary;
-    font-family: inherit;
-    color: $color-white;
-    font-size: 16px;
-    line-height: 1;
-    padding: 15px 17px;
+.input-text {
+    padding: 12px 120px 12px 5px;
+    margin: 8px 0;
     display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
 }
 
-.copyright{
-  margin: 30px 0;
-   display: flex;
+.label-email {
+    margin-top: 20px;
+}
+
+
+
+.copyright {
+    margin: 30px 0;
+    display: flex;
     justify-content: center;
     font-weight: bold;
-    
 }
