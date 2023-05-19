@@ -2,6 +2,8 @@
 
 Maquetación Web usando HTML, CSS generado con SASS
 
+Autora: Mairi Tikk
+
 ## Estructura de carpetas
 
 - css
@@ -13,3 +15,17 @@ Maquetación Web usando HTML, CSS generado con SASS
     - _layout.scss : define la ubicación de los componentes
 - index.html : contenido de la página principal
 - package.json : archivo de configuracion 
+
+Las imagenes sean obtenido de la página https://placehold.jp/
+
+## Pruebas de maquetación
+
+En la carpeta de **img** se encuentran test de maquetación.
+
+### Mobile
+
+<img src="img/mobile.jpeg" alt= “mobile image” height="400px">
+
+### Screen 
+
+<img src="img/screen.jpeg" alt= “screen image” height="400px">
