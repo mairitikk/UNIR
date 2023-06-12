@@ -1,159 +1,66 @@
-.linia-corte {
-    margin: 0;
-    border-style: solid;
-    border-width: 1px;
-    color: $color-primary;
-}
-.title {
-    font-size: 20px;
-    font-weight: bolder;
-}
-.menu-list {
-    padding: 15px;
-    margin: auto;
-}
-.menu-link {
-    color: $color-black;
-    font-weight: 300;
-}
-.button-menu {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
     border-radius: 6px;
-    background-color: $color-white;
-    font-weight: 500;
-    line-height: 1;
-    padding: 14px;
+    border: 1px solid #D4D4D8;
+    background-color: #ffffff;
 }
 
-.main-img-size {
-    background-color: $color-green;
-    font-size: 12px;
-    padding: 5px;
-    color: $color-white;
-    position: relative;
-    top: 42px;
-    left: 28px;
-}
-.oferta {
-    margin-top: 20px;
-    font-size: 12px;
-    color: $color-red;
-    font-weight: bold;
-}
-.titel-ifhone {
-    font-size: 36px;
-    margin: 0;
+.btn:hover {
+    background-color: #999999;
+    color: #ffffff;
 }
 
-.precio {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
+.btn--primary {
+    background-color: #3B82F6;
+    color: #ffffff;
+    border-color: #1E40AF;
 }
 
-.icon {
-    font-size: 24px;
-    font-weight: bolder;
+.btn--primary:hover {
+    background-color: #1E40AF;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+.text-important {
+    color: #e60000;
+    text-transform: uppercase;
 }
 
 .card {
-    border-style: solid;
-    border-width: 0.2px;
-    border-radius: 7px;
-    border-color: lightgray;
     padding: 16px;
-}
-.accesorios-heading {
-    font-size: 34px;
-}
-.card-img {
-    width: 100%;
-    
-    @media (min-width: 768px) {
-        width: auto;
-        
-    }
-}
-
-.card-heading {
-    font-size: 22px;
-}
-
-.card-info {
-    line-height: 1.5;
-    
-}
-
-.button {
-    border: 1px solid;
+    border: 1px solid #cccccc;
     border-radius: 6px;
-    font-family: inherit;
-    color: $color-white;
-    font-size: 16px;
-    line-height: 1;
-    padding: 16px;
+}
+
+.pill {
+    font-size: .9rem;
+    border-radius: 4px;
+    display: inline-flex;
+    padding: 4px 6px;
+}
+
+.pill--1 {
+    background-color: #e60000;
+    color: #ffffff;
+}
+
+.pill--2 {
+    background-color: #1E40AF;
+    color: #ffffff;
+}
+
+.tag {
     display: inline-block;
-    background-color: $color-secondary;
+    padding: 4px 6px;
+    background: green;
+    color: #ffffff;
 }
-.button--enviar {
-    padding: 15px 17px;
-}
-
-.button--oferta {
-    font-size: 14px;
-    padding: 10px 12px;
-    background-color: $color-red;
-}
-
-.button--nuevo {
-    font-size: 14px;
-    padding: 10px 12px;
-   
-}
-.sorteo {
-    margin: 20px 10px 0px;
-    background-color: $color-tertiary;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 30px;
-    @media (min-width: 768px) {
-        flex-wrap: nowrap;
-        margin: 30px 70px;
-        padding: 60px;
-    }
-
-    &-heading {
-        font-size: 48px;
-        margin-top: 0px;
-    }
-
-    &-info {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-}
-
-.input-text {
-    padding: 12px 120px 12px 5px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 15px;
-}
-
-.label-email {
-    margin-top: 20px;
-}
-
-
-
-.copyright {
-    margin: 30px 0;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
+.header {
+    border-bottom: 1px solid #cccccc;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }

@@ -1,0 +1,33 @@
+.wrapper {
+    max-width: 1440px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto
+}
+.heading {
+    border-bottom: 1px solid #cccccc;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.heading-1 {
+font-weight: bold;
+font-size: 1.5rem;
+}
+.main-content{
+    display: flex;
+}
+.col-1{
+    flex-basis: 60%;
+
+}
+.col-2{
+    flex-basis: 40%;
+}
+.border-line{
+    border: 1px solid #ddd;
+}
+#products{
+    
+  width: 100%;
+}

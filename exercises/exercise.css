@@ -1,0 +1,12 @@
+.titulo-1{
+    font-size: 2rem;
+}
+.semaforo{
+    font-size: 4rem;
+}
+.semaforo__luz{
+    color: red;
+}
+.semaforo--avanza .semaforo__luz{
+    color: green;
+}

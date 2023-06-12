@@ -13,178 +13,219 @@
   </head>
   <body>
     <!--header: título de la página y el menu de navegacion-->
-    <header class="header-container">
-      
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__inner">
       <!--h1: título-->
-      <h1 class="title">agoodshop</h1>
-      <nav>
-        <ul class="menu">
-          <li class="menu-list"><a class="menu-link" href="#"> Tienda </a></li>
-          <li class="menu-list"><a class="menu-link" href="#">Accesorios</a></li>
-          <li class="menu-list"><a class="menu-link" href="#">Soporte</a></li>
-          <li class="menu-list"><button class="button-menu">Contactar</button></li>
+      <span class="heading-3">agoodshop</span>
+      <nav class="header__w-menu">
+        <ul class="header__menu">
+          <li><a href=""> Tienda </a></li>
+          <li><a href="">Accesorios</a></li>
+          <li><a href="">Soporte</a></li>
+          <li><a href="" class="btn">Contactar</a></li>
         </ul>
       </nav>
+        </div>
+      </div>
     </header>
 
-    <!--corte temático-->
-    <hr class="linia-corte">
+   
 
     <!--main: contenido principal-->
-    <main class="main-content">
+    <main class="wrapper">
       <!-- mantenemos el contenido unido-->
-      <div class="main-container">
-        <!-- primera parte del contenido del main-->
-        <div class="main-row1">
+      <article class="main-article">
+        
+        <div class="main-article__w-img">
+        <div class="main-article__w-w-img">
             <!--foto del main contenido -->
-            <span class="main-img-size">128gb</span>
-            <img class="card-img" src="https://placehold.jp/450x450.png" alt="iFhone 13 Pro">
+            <span class="tag main-article__img-tag">128gb</span>
+            <img src="https://placehold.jp/450x450.png" alt="iFhone 13 Pro" />
+        </div>
         </div>
       
         <!--segunda parte del contenido del main-->
-        <div class="main-row2">
+        <div class="main-article__w-content">
+          <div class="main-article__content">
+            <div>
           <!--titulo de contenido principal-->
-          <header >
-            <p class="oferta">OFERTA</p>
-          <h1 class="titel-ifhone">Compra un iFhone 13 Pro</h1>
-          </header>
+         
+            <p class="text-important">OFERTA</p>
+          <h1 class="heading-5">Compra un iFhone 13 Pro</h1>
+            </div>
           <!--info del contenido-->
+          <div class="main-article__w-description">
           <p>
             iFhone 13: Tu nuevo superpoder. Nuestro sistema de cámara dual más avanzado. El chip que hace morder el polvo a la competencia. Un subidón de autonomía que vaya si notarás. Ceramic Shield, más duro que cualquier vidrio de smartphone.
           </p>
           <p>
             Pantalla Super Retina XDR de 6,1 pulgadas. Diseño robusto con bordes planos y resistente al agua.
           </p>
+          </div>
           <!--main contenido precio y boton comprar-->
-          <div class="comprar">
-            <h2 class="precio">938,99€</h2>
-            <button class="button">Comprar</button>
+          <div class="main-article__w-price">
+            <span class="heading-5">938,99€</span>
+            <a href="" class="btn btn--primary">Comprar</a>
           </div>
         
           <!--footer del contenido principal-->
-          <footer class="main-article-footer">
-            <ul class="main-articel-footer-list">
-              <li class="main-articel-footer-list-item">
-              <span class="lnr lnr-home icon"></span>
-                <p class="main-articel-footer-list-item-text"> Envio rapido, gratuito y sin contacto</p>
+          
+            <ul class="main-article__feature">
+              <li class="main-articel__w-feature">
+                <div class="main-article__feature">
+              <span class="lnr lnr-home icon main-article__feature-img img-responsive"></span>
+                <p class="main-article__feature-title"> Envio rapido, gratuito y sin contacto</p>
+                </div>
               </li>
-              <li class="main-articel-footer-list-item">
-              <span class="lnr lnr-redo icon"></span>
-                <p class="main-articel-footer-list-item-text">Devoluciones fáciles y gratuitas</p>
+              <li class="main-articel__w-feature">
+                <div class="main-article__feature">
+              <span class="lnr lnr-redo icon main-article__feature-img img-responsive"></span>
+                <p class="main-article__feature-title">Devoluciones fáciles y gratuitas</p>
+              </div>
               </li>
-              <li class="main-articel-footer-list-item">
-                <span class="lnr lnr-file-empty icon"></span>
-                <p class="main-articel-footer-list-item-text">Posibilidad de pago a plazos</p>
+              <li class="main-articel__w-feature">
+                <div class="main-article__feature">
+                <span class="lnr lnr-file-empty icon main-article__feature-img img-responsive"></span>
+                <p class="main-article__feature-title">Posibilidad de pago a plazos</p>
+                </div>
               </li>
             </ul>
-          </footer>
+          
         </div>
       </div>
-    </main>
+    </article>
 
     <!--section para accesorios-->
-    <section class="accesorios">
+    <section class="accessories">
       <!--titulo inicial-->
-      <header>
-        <h2 class="accesorios-heading">Accesorios recomendados</h2>
-      </header>
+      
+        <h2 class="accessories__title heading-5">Accesorios recomendados</h2>
+      
       <!--container para sección accesorios -->
-      <div class="accesorios-container">
+      <ul class="accessories__inner">
 
       <!--accessio con foto, titulo y contenido-->
-      <div class="card">
+      <li class="accesories__w-accesory">
+        <article class="card accesory">
         <!--foto del accessio--> 
-        <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de cargador">
+        <img class="accesory__img img-responsive" src="https://placehold.jp/230x170.png" alt="foto de cargador">
         <!--titulo y contenido del accesorio -->
-        <div class="card-body">
-          <h3 class="card-heading">Cargador</h3>
-          <p class="card-info">
-            El adaptador de corriente USB-C de 20 W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.
+        
+          <h1 class="accesory__title heading-3">Cargador</h1>
+          <div class="accesory__w-content">
+            <p>El adaptador de corriente USB-C de 20 W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.
           </p>
         </div>
-      </div>
+        </article>
+      </li>
       
       <!--accessio con foto, titulo y contenido-->
-      <div class="card">
+      <li class="accesories__w-accesory">
+        <article class="card accesory">
         <!--foto del accessio-->
-        <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de base inalámbrica">
+        <img class="accesory__img img-responsive" src="https://placehold.jp/230x170.png" alt="foto de base inalámbrica">
         <!--titulo y contenido del accesorio -->
-        <div class="card-body">
-          <h3 class="card-heading">Base de carga inalámbrica</h3>
-          <button class="button button--oferta">Oferta</button>
-          <p class="card-info">
+       
+          <h1 class="accesory__title heading-3">Base de carga inalámbrica</h1>
+          <div class="accesory__w-pills">
+            <span class="pill pill--1">Novedad</span>
+          </div>
+          <div class="accesory__w-content">
+          <p>
             Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga rápida de 20W.
           </p>
-        </div>
-      </div>
+          </div>
+        </article>
+      </li>
+      
     
       <!--accessio con foto, titulo y contenido-->
-      <div class="card">
+      <li class="accesories__w-accesory">
+        <article class="card accesory">
         <!--foto del accessio-->
-        <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de funda piel">
+        <img class="accesory__img img-responsive" src="https://placehold.jp/230x170.png" alt="foto de funda piel">
         <!--titulo y contenido del accesorio -->
-        <div class="card-body">
-          <h3 class="card-heading">Funda piel</h3>
-          <p class="card-info">
+        
+          <h1 class="accesory__title heading-3">Funda piel</h1>
+          <div class="accesory__w-pills">
+            <span class="pill pill--2">Oferta</span>
+          </div>
+          <div class="accesory__w-content">
+          <p>
             Fabricadas en piel europea curtida y teñida con un proceso especial, son suaves al tacto y adquieren un tono natural con el tiempo. 
-          </p>
-          <p class="card-info">
-            Los botones de aluminio combinan a la perfección con el acabado de la piel. 
+      Los botones de aluminio combinan a la perfección con el acabado de la piel. 
           </p>
         </div>
-      </div>
+        </article>
+      </li>
     
       <!--accessio con foto, titulo y contenido-->
-      <div class="card">
+      <li class="accesories__w-accesory">
+        <article class="card accesory">
         <!--foto del accessio-->
-        <img class="card-img" src="https://placehold.jp/230x170.png" alt="foto de cargador">
+        <img class="accesory__img img-responsive" src="https://placehold.jp/230x170.png" alt="foto de cargador">
         <!--titulo y contenido para accessorios section-->
-        <div class="card-body">
-          <h3 class="card-heading">Cargador</h3>
-          <button class="button button--nuevo">Nuevo</button>
-          <p class="card-info">
+        
+          <h1 class="accesory__title heading-3">Cargador</h1>
+          <a href="" class="btn btn--primary">Nuevo</a>
+          
+            <div class="accesory__w-content">
+              <p>
             El adaptador de corriente USB-C de 20 W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.
           </p>
         </div>
-      </div>
+        </article>
+      </li>
+      </ul>
     </section>
   
     <!--section sorteo -->
-    <aside class="sorteo">
-      <div class="sorteo-container">
+    <aside class="raffle">
+      <div class="raffle__w-content">
         <!--titulo para sorteo -->
-        <h1 class="sorteo-heading">
+        <h2 class="heading-7">
           Participa en el sorte de un iFhone 13
-        </h1>
+        </h2>
         <!--contenido de sorteo-->
-        <p class="sorteo-info">
+        <p>
           Este verano, ¡venimos cargador de premios! Así que antes de irte de vacaciones, ¡participa en
           nuestro
           sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13
         </p>
-        <p class="sorteo-info">
+        <p>
             Rellena este formulario para ser uno de los afortunados.
         </p>
       </div>
 
       <!--formulario para participar en sorteo-->
-      <div class="container-form">
-        <form action="/action_page.php">
-          <label for="fname">Nombre</label><br>
-          <input type="text" id="fname" name="fname" class="input-text" placeholder="Ari Gold"><br>
-          <label for="email" class="label-email">Email</label><br>
-          <input type="text" id="email" name="email" class="input-text" placeholder="arigold@mga.com"><br><br>
-          <input type="button" class="button button--enviar" value="Enviar">
+      <div class="raffle__w-form">
+        <form class="raffle-form" action="/action_page.php">
+          <div class="raffle-form__w-control">
+          <label for="fname">Nombre</label>
+          <input type="text" id="fname" name="fname" class="raffle-form__input" placeholder="Ari Gold">
+          </div>
+          <div class="raffle-form__w-control">
+          <label for="email" class="label-email">Email</label>
+          
+        <input type="text" id="email" name="email" class="raffle-form__input" placeholder="arigold@mga.com">
+          </div>
+          <button class="btn btn--primary raffle-form__send-button">Enviar</button>
         </form>
       </div>
     </aside>
-    <!-- corte temático-->
-    <hr class="linia-corte">
+    </main>
+   
   
     <!--fin del pagina-->
-    <footer class="end">
+    <footer class="footer">
       <!-- Sección de Copyright-->
-      <div class="copyright"> &copy; agoodshop</div>
+      <div class="wrapper">
+        <div class="footer__inner">
+          <span class="footer__title">agoodshop</span>
+        </div>
+      </div>
+      
     </footer>
   </body>
 </html>
