@@ -21,7 +21,7 @@ let carrito = new Carrito(data);
 
 carrito.actualizarUnidades()
 
-
+const table = document.createElement('table');
 /*const listado = document.querySelector('#listado-alumnos');
 //listado de alumnos
 alumnos.forEach((alumno) => {
@@ -49,14 +49,14 @@ for (var i = 0; i < 3; i++) {
 
 // append table to HTML document
 //document.body.appendChild(table);
+
 /*const data = [
   {name: 'John Smith', age: 35, occupation: 'Engineer'},
   {name: 'Jane Doe', age: 28, occupation: 'Designer'},
   {name: 'Bob Jones', age: 42, occupation: 'Manager'}
 ];
 
-// create a new table element
-const table = document.createElement('table');
+
 
 // create a header row
 const headers = ['Name', 'Age', 'Occupation'];
