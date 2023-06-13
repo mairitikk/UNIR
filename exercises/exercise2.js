@@ -226,21 +226,50 @@ const photos = [
       thumbnailUrl: 'https://via.placeholder.com/150/c70a4d',
     },
   ];
-  document.addEventListener('DOMContentLoaded', () => {
-    const album = document.querySelector('.album');
-    photos.forEach((photo) => {
-        const img = document.createElement('img');
-        img.src = photo.thumbnailUrl;
-        album.appendChild(img);
-    });
-  });
+  const thumbnailClickHandler = (event) => {
+    const img = event.target;
+    const id = img.dataset.id;
+    pintarUnId(Number(id));
+  };
   
- /* document.addEventListener('DOMContentLoaded', () => {
+  const pintarThumbnails = () => {
     const album = document.querySelector('.album');
+    const albumwthumb = album.querySelector('.album__w-thumbnails');
     photos.forEach((photo) => {
       const img = document.createElement('img');
+      img.dataset.id = photo.id;
       img.src = photo.thumbnailUrl;
-      album.appendChild(img);
+      albumwthumb.appendChild(img);
+      img.addEventListener('click', thumbnailClickHandler);
     });
+  };
+  
+  const pintarUnId = (id) => {
+    const album = document.querySelector('.album');
+    const photo = photos.find((photo) => photo.id === id);
+    // Pintar el primero
+    const wimg = album.querySelector('.album__w-img');
+    wimg.innerHTML = '';
+  
+    const img = document.createElement('img');
+    img.src = photo.url;
+    img.alt = 'es el título';
+    img.classList.add('album__figure-img');
+  
+    const figcaption = document.createElement('figcaption');
+    figcaption.innerText = photo.title;
+  
+    const figure = document.createElement('figure');
+    figure.classList.add('album__figure');
+  
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+  
+    wimg.appendChild(figure);
+  };
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    debugger;
+    pintarThumbnails();
+    pintarUnId(10);
   });
-  */
