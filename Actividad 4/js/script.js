@@ -1,38 +1,39 @@
+// Importar la classe carrito
+import Carrito from "./carrito.js"; 
 
-const listado = document.querySelector('#listado-alumnos');
+//Function para llamar a la API
+async function consultarAPI(url) {
+  try {
+    // consultamos la API
+    let response = await fetch(url)
+    
+    // obtenemos la respuesta como un json
+    return await response.json();
+  } catch(error) {
+    console.error('There was a problem fetching the data:', error);
+  };
+}
+
+let data = await consultarAPI('https://jsonblob.com/api/1117165857469120512')
+
+//declarar una variable carrito
+let carrito = new Carrito(data);
+
+carrito.actualizarUnidades()
+
+
+/*const listado = document.querySelector('#listado-alumnos');
 //listado de alumnos
 alumnos.forEach((alumno) => {
-    
+
     const li = document.createElement('li');//<li></li>
     li.innerHTML = alumno;//<li>alumno></li>
     listado.appendChild(li); //<ul> <li>alumno</li> </ul>
 
 });
+*/
 
 
-/* 
-Codigo para llamar a la API
-
-fetch('https://jsonblob.com/api/1117165857469120512')
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error('Network response was not ok');
-    }
-  })
-  .then(data => {
-    console.log(data.products);
-    data.products.forEach((alumno) => {
-    
-        
-    
-    });
-    // Do something with the data, like display it in a table
-  })
-  .catch(error => {
-    console.error('There was a problem fetching the data:', error);
-  }); */
 
 /* // create table element
 var table = document.querySelector('#products')//document.createElement("table");
@@ -47,7 +48,7 @@ for (var i = 0; i < 3; i++) {
 } */
 
 // append table to HTML document
-document.body.appendChild(table);
+//document.body.appendChild(table);
 /*const data = [
   {name: 'John Smith', age: 35, occupation: 'Engineer'},
   {name: 'Jane Doe', age: 28, occupation: 'Designer'},
@@ -80,3 +81,27 @@ data.forEach(datum => {
 
 // add the table to the DOM
 document.body.appendChild(table); */
+
+
+/**
+ * 
+ * function consultarAPI(url) {
+  fetch(url)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .then(data => {
+
+      // Do something with the data, like display it in a table
+      carrito = new Carrito(data);
+
+    })
+    .catch(error => {
+      console.error('There was a problem fetching the data:', error);
+    });
+}
+ */
