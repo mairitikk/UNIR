@@ -15,7 +15,9 @@ font-weight: bold;
 font-size: 1.5rem;
 }
 .main-content{
+    margin-top: 2rem;
     display: flex;
+    gap: 3rem;
 }
 .col-1{
     flex-basis: 60%;
@@ -23,11 +25,30 @@ font-size: 1.5rem;
 }
 .col-2{
     flex-basis: 40%;
+    width: 100%;
+    background-color: #efe9e9b4;
 }
 .border-line{
     border: 1px solid #ddd;
 }
+
+th{
+    font-weight: lighter;
+}
 #products{
+    width: 100%;
+    text-align: center;
+}
+.input-number{
+    width: 1.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 0.5rem 0.3rem;
+    border-radius: 0.35rem;
     
-  width: 100%;
+}
+.plusminus{
+    background-color: white;
+    border: none;
+    
 }
