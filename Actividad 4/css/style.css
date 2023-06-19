@@ -1,3 +1,10 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; }
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #27272a; }
 .wrapper {
     max-width: 1440px;
     padding-left: 1rem;
@@ -7,12 +14,12 @@
 }
 .heading {
     border-bottom: 1px solid #cccccc;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
 }
 .heading-1 {
-font-weight: bold;
-font-size: 1.5rem;
+font-weight: bolder;
+font-size: 1.3rem;
 }
 .main-content{
     margin-top: 2rem;
@@ -26,29 +33,48 @@ font-size: 1.5rem;
 .col-2{
     flex-basis: 40%;
     width: 100%;
+    height: 100%;
     background-color: #efe9e9b4;
-}
-.border-line{
-    border: 1px solid #ddd;
+    padding: 2rem;
+    
 }
 
 th{
-    font-weight: lighter;
+   border-bottom: 1px solid #cccccc;;
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+}
+td{
+    padding-top: 2rem;
+    padding-right: 2rem;
+    
 }
 #products{
     width: 100%;
-    text-align: center;
+    text-align: left;
+   
 }
+
 .input-number{
     width: 1.5rem;
     text-align: center;
+    font-size: 0.7rem;
     border: 1px solid #ddd;
-    padding: 0.5rem 0.3rem;
+    padding: 0.4rem;
     border-radius: 0.35rem;
     
 }
-.plusminus{
+.button-cantidad{
     background-color: white;
     border: none;
+    padding: 1rem;
     
+}
+.heading-2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.reference{
+    font-size: 0.8rem;
+    padding-top: 0.4rem;
 }

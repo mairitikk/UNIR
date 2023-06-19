@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>agoodshop</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css">
   </head>
   <body>
     <div class="wrapper">
@@ -17,51 +18,13 @@
         <div class="col-1">
           <table id="products">
             <tr class="border-line">
-              <th>Product</th>
-              <th>Candidad</th>
-              <th>Unidad</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
               <th>Total</th>
             </tr>
 
-            <tr class="border-line">
-              <td>
-                <span class="heading-2">iFhone 13 Pro</span>
-                <p>Ref: 0K3QOSoV4V</p>
-              </td>
-              <td>
-                <button class="plusminus">-</button>
-                <input  inputmode="numeric" value="0" class="input-number"/>
-                <button class="plusminus">+</button>
-              </td>
-              <td>938,99€</td>
-              <td>0 €</td>
-            </tr>
-            <tr class="border-line">
-              <td>
-                <span class="heading-2">Cargador</span>
-                <p>Ref: TGD5XORYL</p>
-              </td>
-              <td>
-                <button>-</button>
-                <input type="number" value="0" />
-                <button>+</button>
-              </td>
-              <td>49,99€</td>
-              <td>0 €</td>
-            </tr>
-            <tr>
-              <td>
-                <span class="heading-2"> Funda de piel</span>
-                <p>Ref:IOKW9BQ9F3</p>
-              </td>
-              <td>
-                <button>-</button>
-                <input type="number" value="0" />
-                <button>+</button>
-              </td>
-              <td>49,99 €</td>
-              <td>0 €</td>
-            </tr>
+            
           </table><!--hacer con html-->
         </div>
         <div class="col-2">
@@ -73,7 +36,7 @@
             <p>159,98</p>
           </div>
           <p>TOTAL</p>
-          <p>5820€</p>
+          <p id="total__price">5820€</p>
         </div>
       </main>
     </div>
