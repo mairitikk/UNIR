@@ -1,8 +1,20 @@
-// Importar la classe carrito
+
+document.addEventListener("DOMContentLoaded", ()=> {
+
+})
+  // Importar la classe carrito
 import Carrito from "./carrito.js";
 
-// Crear función para llamr API
-async function consultarAPI(url) {
+// Crear función para llamar API de forma Sync
+/** 
+ * Me incliné por una implementacion en la que se bloquea el programa (consultarAPISync) 
+ * porque 1) la información recibida por la API no es muy grande
+ * y 2) para instanciar mi Carrito necesito del JSON (es decir la lista de productos).
+ * 
+ * No obstante dejo la implementación (consultarAPIAsync) 
+ * pero el resto de código se debería modificar un poco.
+ */
+async function consultarAPISync(url) {
   try {
     // consultamos la API
     let response = await fetch(url)
@@ -13,6 +25,27 @@ async function consultarAPI(url) {
     console.error('There was a problem fetching the data:', error);
   };
 }
+
+// Crear función para llamar API de forma Async
+function consultarAPIAsync(url) {
+  fetch(url).then(response => {
+    if (response.ok){
+      return response.json();
+    }else {
+      if (response.status===500) {
+        return Promise.reject(rejectReponse)
+      }
+    }
+  }).then(data => {
+    carrito = new Carrito(data);
+  }).then(undefined, data=>console.log(data))
+  .catch (error => {
+    console.error('There was a problem fetching the data:', error);
+  });
+}
+
+
+
 /*
 () => {
   // obtener el campo input
@@ -145,7 +178,7 @@ function insertarInfoEnCol2(carrito){
 }
 
 
-let json = await consultarAPI('https://jsonblob.com/api/1117165857469120512')
+let json = await consultarAPISync('https://jsonblob.com/api/1117165857469120512')
 
 //declarar o instanciar una variable carrito
 let carrito = new Carrito(json);
