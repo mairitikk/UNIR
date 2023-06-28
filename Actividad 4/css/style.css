@@ -1,7 +1,8 @@
 * {
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+ }
 body {
     font-family: 'Roboto', sans-serif;
     color: #27272a; }
@@ -36,31 +37,35 @@ font-size: 1.3rem;
     height: 100%;
     background-color: #efe9e9b4;
     padding: 2rem;
-    
 }
 
+
 th{
-   border-bottom: 1px solid #cccccc;;
+   
     font-size: 0.8rem;
     padding-bottom: 1rem;
+    border-bottom: 1px solid #cccccc;
 }
 td{
     padding-top: 2rem;
     padding-right: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #cccccc;
     
 }
-#products{
+.decoration-table-header{
     width: 100%;
     text-align: left;
+    table-layout: fixed;
    
 }
 
 .input-number{
-    width: 1.5rem;
+    width: 2.5rem;
     text-align: center;
     font-size: 0.7rem;
     border: 1px solid #ddd;
-    padding: 0.4rem;
+    height: 2.5rem;
     border-radius: 0.35rem;
     
 }
@@ -68,13 +73,41 @@ td{
     background-color: white;
     border: none;
     padding: 1rem;
+    cursor: pointer;
     
 }
 .heading-2 {
     font-size: 1.3rem;
     font-weight: bold;
+    padding-bottom: 1rem;
 }
+
 .reference{
     font-size: 0.8rem;
     padding-top: 0.4rem;
+}
+
+.uppercase{
+  text-transform: uppercase;  
+}
+.decoration-bold{
+    font-weight: bold;
+}
+.container-display{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 0.6rem;
+}
+.left-inner-container{
+    
+    display: inline-flex;
+    flex-basis: 50%;
+}
+.right-inner-container{
+    flex-basis: 50%;
+   text-align: right;
+}
+.total{
+    border-top: 1px solid #cccccc;
+    padding-top: 1rem;
 }

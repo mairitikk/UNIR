@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>agoodshop</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -16,31 +16,26 @@
 
       <main class="main-content">
         <div class="col-1">
-          <table id="products">
-            <tr class="border-line">
+          <table id="products" class="decoration-table-header">
+            <tr>
               <th>Producto</th>
               <th>Cantidad</th>
               <th>Precio</th>
               <th>Total</th>
             </tr>
-
-            
-          </table><!--hacer con html-->
+          </table>
+          <!--hacer con html-->
         </div>
         <div class="col-2">
-          <p class="heading-2">Total</p>
-          <div id="total__products">
-            <div>iFhone 13 Pro</div>
-            <div>2816,97</div>
-            <p>Funda de piel</p>
-            <p>159,98</p>
+          <span class="heading-2">Total</span>
+          <div id="total__products"></div>
+          <div class="total container-display">
+            <div class="left-inner-container uppercase" >total</div>
+            <div id="total__price" class="right-inner-container decoration-bold">0€</div>
           </div>
-          <p>TOTAL</p>
-          <p id="total__price">5820€</p>
         </div>
       </main>
     </div>
     <script type="module" src="js/script.js"></script>
-    
   </body>
 </html>

@@ -1,19 +1,7 @@
-
-document.addEventListener("DOMContentLoaded", ()=> {
-
-})
-  // Importar la classe carrito
+// Importar la classe carrito
 import Carrito from "./carrito.js";
 
 // Crear función para llamar API de forma Sync
-/** 
- * Me incliné por una implementacion en la que se bloquea el programa (consultarAPISync) 
- * porque 1) la información recibida por la API no es muy grande
- * y 2) para instanciar mi Carrito necesito del JSON (es decir la lista de productos).
- * 
- * No obstante dejo la implementación (consultarAPIAsync) 
- * pero el resto de código se debería modificar un poco.
- */
 async function consultarAPISync(url) {
   try {
     // consultamos la API
@@ -27,166 +15,207 @@ async function consultarAPISync(url) {
 }
 
 // Crear función para llamar API de forma Async
+// Utilizo esta función. Pero la página también funciona con 
+// consultarAPISync(). Se debe descomentar en la parte final del script
 function consultarAPIAsync(url) {
+  //consultar la API
   fetch(url).then(response => {
+    //si respuesta 200, retornamos json
     if (response.ok){
       return response.json();
     }else {
+      //en caso contrario rechazar promesa si error es 500
       if (response.status===500) {
         return Promise.reject(rejectReponse)
       }
     }
+    //procesar json
   }).then(data => {
+    //instanciar carrito con la informacion del json
     carrito = new Carrito(data);
+    
+    //pintar contenido de la tabla
+    pintarInfoEnCol1(carrito)
+
+    //si no se recibe ningun json, se imprime por consola
   }).then(undefined, data=>console.log(data))
   .catch (error => {
     console.error('There was a problem fetching the data:', error);
   });
 }
 
-
-
-/*
-() => {
-  // obtener el campo input
-
-  // tomar su valor en entero
-  const inputValueminus = parseInt(producto.cantidad.value);
-
-  // restar la cantidad
-  inputValueminus.valueOf = inputValueminus - 1;
-}
-*/
+//funcion para manejar el botton de cantidad
 const cantidadClickHandler = (event) => {
   const botton = event.target;
   const sku = botton.dataset.sku;
   const signo = botton.innerHTML;
   actualizarCantidad(sku, signo)
   actualizarTotal(sku)
-  insertarInfoEnCol2(carrito)
+  pintarInfoEnCol2(carrito)
 }
 
+//funcion para pintar el total de un producto
 const actualizarTotal = (sku) => {
   let td = document.querySelector('td[data-sku="' +sku +'"]');
   td.innerHTML = carrito.obtenerInformacionProducto(sku).total +" "+ carrito.getCurrency()
 }
 
+//funcion general para actualizar la cantidad de un producto
+//controla si signo es negativo o positivo
 const actualizarCantidad = (sku, signo) => {
+
+  //se obtiene el valor de la cantidad
   let input = document.querySelector('input[data-sku="' + sku + '"]');
   let value = Number(input.value)
+  
+  // si el signo es negativo y el valor mayor que cero, resta
   if (signo === "-" && value > 0) {
     input.value = value - 1
   }
+  
+  // si el signo es positivo, suma
   if (signo === "+") {
     input.value = value + 1
   }
-  carrito.actualizarUnidades(sku, input.value)
+  carrito.actualizarCantidades(sku, input.value)
 }
 
+//function para pintar la tabla
+function pintarInfoEnCol1(carrito) {
 
-function insertarInfoEnCol1(carrito) {
-
+  //obtener tabla productos
   let table = document.querySelector('#products')
 
+  //obtener carrito
   let info = carrito.obtenerCarrito()
 
+  //para cada producto
   info.products.forEach((product) => {
 
+    //agregar una fila en la tabla
     let row = table.insertRow();
-    row.classList.add("border-line")
 
-    // columna producto
-    let cell = row.insertCell(); // creamos una columna
 
+    /* columna producto */
+    let cell = row.insertCell(); 
+
+    //crear titulo
     let span = document.createElement("span");
     span.innerHTML = product.title
     span.classList.add("heading-2")
     cell.appendChild(span)
 
+    //crear referencia producto
     let p = document.createElement("p")
     p.innerHTML = "Ref: " + product.SKU
     p.classList.add("reference")
     cell.appendChild(p)
 
 
-    // columna cantidad
+    /* columna cantidad*/
     let cell2 = row.insertCell();
 
-    // boton menos
-    let button = document.createElement("button");
-    button.dataset.sku = product.SKU;
-    button.innerHTML = "-";
-    button.classList.add("button-cantidad");
+    // crear boton menos
+    let button = createButton(product.SKU, "-");
     cell2.appendChild(button);
 
-    button.addEventListener("click", cantidadClickHandler);
-
-
-    // input
+    // crear input
     const input = document.createElement("input")
     input.dataset.sku = product.SKU
     input.type = 'number';
     input.classList.add("input-number");
     input.value = "0";
-    input.classList.add("input-number");
     cell2.appendChild(input);
 
-    // boton mas
-    let button2 = document.createElement("button");
-    button2.dataset.sku = product.SKU;
-    button2.innerHTML = "+";
-    button2.classList.add("button-cantidad");
+    // crear boton mas
+    let button2 = createButton(product.SKU,"+")
     cell2.appendChild(button2);
 
-    button2.addEventListener("click", cantidadClickHandler);
 
-
-    // columna precio
+    /* columna precio */
     let cell3 = row.insertCell();
+
+    //crear precio
     cell3.innerHTML = product.price + " " + carrito.getCurrency();
 
-    // columna total
+
+    /* columna total */
     let cell4 = row.insertCell();
+
+    //crear total
     cell4.dataset.sku = product.SKU;
     cell4.innerHTML = product.total + " " + carrito.getCurrency();
 
   })
 }
 
-function insertarInfoEnCol2(carrito){
+// function general para crear botton
+function createButton(SKU,value){  
+  let button = document.createElement("button");
+  button.dataset.sku = SKU;
+  button.innerHTML = value;
+  button.classList.add("button-cantidad");
 
+  button.addEventListener("click", cantidadClickHandler);
+  return button
+}
+
+// pintar informacion del total
+function pintarInfoEnCol2(carrito) {
+  // obtener div total de productos
   let totalProducts = document.getElementById('total__products')
+
+  //limpiar su contenido
   totalProducts.innerHTML= " ";
 
+  //obtener carrito
   let info = carrito.obtenerCarrito();
-  info.products.forEach((product) =>{
-    if (product.total != 0 ){
-      let p = document.createElement("p");
-      p.innerHTML = product.title;
-      totalProducts.appendChild(p);
 
-      let p2 = document.createElement("p");
-      p2.innerHTML = product.total;
-      totalProducts.appendChild(p2);
+  //para cada producto
+  info.products.forEach((product) => {
+
+    //si producto tiene un total diferente de cero, pintar total producto
+    if (product.total != 0 ) {
+      let container = document.createElement("div");
+      container.classList.add("container-display");
+
+      let div = document.createElement("div");
+      div.innerHTML = product.title;
+      div.classList.add("left-inner-container");
+
+      let div2 = document.createElement("div");
+      div2.innerHTML = product.total+ " " + carrito.getCurrency();
+      div2.classList.add("right-inner-container");
+      
+      container.appendChild(div);
+      container.appendChild(div2);
+      totalProducts.appendChild(container);
     }
   });
 
+  //pintar el precio total
   let totalPrice = document.getElementById('total__price')
   totalPrice.innerHTML= carrito.getTotal() + " " + carrito.getCurrency()
-  console.log(info);
-
+  
 }
 
-
-let json = await consultarAPISync('https://jsonblob.com/api/1117165857469120512')
-
 //declarar o instanciar una variable carrito
-let carrito = new Carrito(json);
+let carrito = [];
 
-// carrito.actualizarUnidades('0K3QOSOV4V', 4)
-// console.log(carrito.obtenerInformacionProducto('0K3QOSOV4V'))
+document.addEventListener("DOMContentLoaded", () => {
+    
+  /** Asynchrono */
+  consultarAPIAsync('https://jsonblob.com/api/1117165857469120512')
 
-insertarInfoEnCol1(carrito)
+  /*
+  Synchrono
+  let json = await consultarAPISync('https://jsonblob.com/api/1117165857469120512')
 
-insertarInfoEnCol2(carrito)
+  //declarar o instanciar una variable carrito
+  carrito = new Carrito(json);
 
+  insertarInfoEnCol1(carrito)
+  insertarInfoEnCol2(carrito)
+
+  */
+});

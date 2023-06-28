@@ -4,36 +4,50 @@ class Carrito {
     #total
 
     constructor(json) {
-        this.#currency = json.currency;
-        this.#productos = json.products;
+        
+        this.#currency = "S";
+        this.#productos = [];
 
-        //para cada productos agregamos cantidad = 0
-        this.#productos.forEach((producto) => {
-            producto.cantidad = 0
-            producto.total = 0
-        })
+        if (json == undefined){
+            console.log("Json empty")
+        }else{
+            
+            this.#currency = json.currency;
+            this.#productos = json.products;
+
+            //para cada productos agregamos cantidad = 0
+            this.#productos.forEach((producto) => {
+                producto.cantidad = 0
+                producto.total = 0
+            })
+        }
 
         // calculamos el total
         this.calcularTotal()
+        
         
     }
 
     calcularTotal(){
         const total = this.#productos.reduce((acc, producto) =>{
-            return acc + producto.total
+            return Number(acc) + Number(producto.total);
             
         }, 0)
-        this.#total = total
+        this.#total = total.toFixed(2);
+    
     }
 
     // Actualiza el número de unidades que se 
     // quieren comprar de un producto (sku)
-    actualizarUnidades(sku, unidades) {
+    actualizarCantidades(sku, cantidad) {
         //let producto = this.productos.filter(function (item){ return item.SKU===sku; });
         let producto = this.#productos.find(item=>item.SKU===sku);       
-        producto.cantidad = unidades
-        producto.total = Number(producto.price) * producto.cantidad
+        producto.cantidad = cantidad
+        const total = Number(producto.price) * producto.cantidad;
+        producto.total = total.toFixed(2)
+    
         this.calcularTotal()
+       
     }
 
     // Devuelve los datos de un producto 
