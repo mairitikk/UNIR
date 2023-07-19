@@ -43,7 +43,8 @@ ol, ul, menu {
   padding: 8px 12px;
   border-radius: 6px;
   border: 1px solid #D4D4D8;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+ }
 
 .btn:hover {
   background-color: #999999;

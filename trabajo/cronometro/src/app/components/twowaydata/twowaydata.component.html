@@ -1,0 +1,9 @@
+<input type="number" placeholder="introduce primer numero"
+ [(ngModel)]="numero1">
+<input type="number" placeholder="introduce segundi numero"
+[(ngModel)]="numero2">
+<!--<button (click)="sumar()">Sumar</button>-->
+<button (click)="calcular($event)">Sumar</button>
+<button (click)="calcular($event)">Restar</button>
+<button (click)="calcular($event)">Multiplicar</button>
+<p>El resultado de sumar {{operacion}} {{numero1}} y {{numero2}} es {{resultado}}</p>
