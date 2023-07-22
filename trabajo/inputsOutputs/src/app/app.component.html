@@ -1,0 +1,10 @@
+<header>
+<!--componente formolario-->
+<app-form (numeroEmitido)="getNumber($event)"></app-form>
+</header>
+<main>
+  <section>
+    <!--voy a pintar lista de numeros-->
+    <app-number-list [miArrayNumeros]="arrNumbers"></app-number-list>
+  </section>
+</main>
