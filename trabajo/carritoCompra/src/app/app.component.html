@@ -1,0 +1,20 @@
+<header>
+  <h1>Lista productos
+    
+  </h1>
+</header>
+<hr>
+<main>
+  <!--
+    cargar el componente lista productos
+  -->
+  <section class="productos">
+    <div><app-lista-products (productoEmitado)="getProduct($event)"></app-lista-products></div>
+<div>
+  <app-lista-productos [misProductos]="producto"></app-lista-productos>
+</div>
+  
+
+  
+</section>
+</main>
