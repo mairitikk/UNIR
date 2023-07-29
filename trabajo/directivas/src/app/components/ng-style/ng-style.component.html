@@ -2,7 +2,9 @@
     dolor sit, amet consectetur adipisicing elit. Eos ullam 
     laboriosam harum temporibus voluptatibus incidunt nobis 
     labore! Asperiores, beatae numquam!</p-->
-    
+    <input type="range" min="10" max="60" step="5" [value]="fontSize"
+    (input)="cambiarFuente($event)">
+    <input type="color" [value]="color" (input)="cambiarColor($event)">
     <p [ngStyle]="{'font-size': fontSize + 'px', 'background-color': color}">
         Lorem ipsum dolor sit amet consectetur 
         adipisicing elit. Odit, iusto. Minima magnam
