@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class NgStyleComponent {
 fontSize: number = 50;
+color: string = 'yellow';
 }
