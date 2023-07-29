@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { EpisodioComponent } from './components/ngfor/episodio/episodio.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { FormsModule } from '@angular/forms';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgforComponent,
     EpisodioComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    NgClassComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

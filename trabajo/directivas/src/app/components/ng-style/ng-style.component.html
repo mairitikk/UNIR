@@ -11,3 +11,18 @@
          reprehenderit voluptate expedita
          illo alias ratione consectetur recusandae.
     </p>
+    <hr>
+    <section class="container">
+    <div>
+        <label for="propiedad">Intruce una propiedad de css</label>
+        <input class="form-control" type="text" id="propiedad"
+        [(ngModel)]="propiedad">
+    </div>
+    <div>
+        <label for="valor">Intruce una valor de css</label>
+        <input class="form-control" type="text" id="valor"
+        [(ngModel)]="valor">
+    </div>
+    <button class="btn btn-primary mt-3" (click)="cambiarEstilos()">Guardar</button>
+</section>
+<p [ngStyle]="estilosParrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, voluptas.</p>
