@@ -1,1 +1,19 @@
-<p>ng-class works!</p>
+<div class="flex">
+  <nav class="menu" [ngClass]="{'visible': estado}">
+    <ul>
+      <li>Home</li>
+
+      <li>Servicios</li>
+
+      <li>Contacto</li>
+    </ul>
+  </nav>
+
+  <div>
+    <button (click)="cambiarEstado()">{{textoBtn}}</button>
+  </div>
+</div>
+<section class="p-5">
+    <p class="text-center p-2" [ngClass]="{'bg-success' : estado, 
+'bg-danger': !estado}">{{textoNotificacion}}</p>
+</section>

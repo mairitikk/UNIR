@@ -7,6 +7,7 @@ import { EpisodioComponent } from './components/ngfor/episodio/episodio.componen
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { FormsModule } from '@angular/forms';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { NgifComponent } from './components/ngif/ngif.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
     NgforComponent,
     EpisodioComponent,
     NgStyleComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgifComponent
   ],
   imports: [
     BrowserModule,
