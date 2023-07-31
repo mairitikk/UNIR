@@ -1,0 +1,30 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.tabs{
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.menu li{
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 120%;
+    background-color: black;
+    color: aliceblue;
+}
+.menu :is(li:hover, .activo){
+    background-color: gray;
+}
+.tabs{
+    border: 1px solid black;
+    
+}
+.tabs section {
+    padding: 10px;
+}

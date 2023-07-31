@@ -1,1 +1,27 @@
-<p>ngif works!</p>
+<div class="tabs">
+    <nav>
+        <ul class="menu">
+            <li [ngClass]="{'activo': sectionActual === 'sobremi'}" (click)="cargarSeccion('sobremi')">Sobre mi</li>
+            <li [ngClass]="{'activo': sectionActual === 'experiencia'}" (click)="cargarSeccion('experiencia')">Experiencia</li>
+            <li [ngClass]="{'activo': sectionActual === 'estudios'}" (click)="cargarSeccion('estudios')">Estudios</li>
+
+        </ul>
+    </nav>
+    <section *ngIf="sectionActual === 'sobremi'">
+        <h3>Sobre mi</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, optio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, corporis?
+
+    </p>
+    </section>
+    <section *ngIf="sectionActual === 'experiencia'">
+        <h3>Experiencia</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nesciunt?</p>
+    </section>
+    <section *ngIf="sectionActual === 'estudios'">
+    <h3>Estudios</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ut?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, aut?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ab at totam amet, quidem cupiditate animi doloribus molestias magnam et distinctio placeat impedit inventore officia. Natus suscipit veniam quos similique laboriosam adipisci repellat sapiente, eum modi labore quaerat. Rerum minus eaque dolor veritatis eveniet itaque vel cupiditate soluta corporis fuga.</p>
+</section>
+</div>
