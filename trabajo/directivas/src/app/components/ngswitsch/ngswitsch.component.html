@@ -1,0 +1,7 @@
+<div class="notificaciones m-3" [ngSwitch]="productos.length">
+    <p *ngSwitchCase="0" class="alert alert-danger">No tienes stock. Tienes 0 productos</p>
+<p *ngSwitchCase="1" class="alert alert-warning">Te queda 1 productos</p>
+<p *ngSwitchCase="2" class="alert alert-warning">Te queda 2 productos</p>
+<p *ngSwitchCase="3" class="alert alert-warning">Te queda 3 productos</p>
+<p *ngSwitchDefault class="alert alert-success">Tenemos stock suficiente</p>
+</div>

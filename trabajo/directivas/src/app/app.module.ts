@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { NgifelseComponent } from './components/ngifelse/ngifelse.component';
+import { NgswitschComponent } from './components/ngswitsch/ngswitsch.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgifelseComponent } from './components/ngifelse/ngifelse.component';
     NgStyleComponent,
     NgClassComponent,
     NgifComponent,
-    NgifelseComponent
+    NgifelseComponent,
+    NgswitschComponent
   ],
   imports: [
     BrowserModule,
