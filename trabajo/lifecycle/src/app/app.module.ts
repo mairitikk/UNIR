@@ -9,7 +9,7 @@ import { DosComponent } from './components/dos/dos.component';
   declarations: [
     AppComponent,
     UnoComponent,
-    DosComponent
+    DosComponent,
   ],
   imports: [
     BrowserModule
