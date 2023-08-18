@@ -1,1 +1,26 @@
-<p>form works!</p>
+<div class="form">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" id="nombre" [(ngModel)]="newAlumno.nombre">
+    </div>
+    <div>
+        <label for="edad">Edad</label>
+        <input class="form-control" type="number" id="edad" [(ngModel)]="newAlumno.edad">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input class="form-control" type="text" id="email" [(ngModel)]="newAlumno.email">
+    </div>
+    <div>
+        <label for="curso">Curso</label>
+    <select id="curso" class="form-select mb-2" [(ngModel)]=
+    "newAlumno.curso">
+    <option value="" selected> Selecciona una opcion</option>
+    <option value="1eso"> 1 ESO</option>
+    <option value="2eso"> 2 ESO</option>
+    <option value="3eso"> 3 ESO</option>
+    <option value="4eso"> 4 ESO</option>
+</select>
+    </div>
+    <button class="btn btn-dark" (click)="getData()">Enviar</button>
+</div>

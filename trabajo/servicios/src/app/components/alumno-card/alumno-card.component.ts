@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Alumno } from 'src/app/interfaces/alumno.interface';
 
 @Component({
   selector: 'app-alumno-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./alumno-card.component.css']
 })
 export class AlumnoCardComponent {
-
+@Input() miAlumno: Alumno | any;
 }

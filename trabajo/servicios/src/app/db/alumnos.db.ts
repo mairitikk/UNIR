@@ -19,7 +19,7 @@ export const ALUMNOS: Alumno[] =
   },
 
   {
-    id: 1,
+    id: 3,
     nombre: 'Roberto Rodriguez',
     edad: 15,
     email: 'roberto@gmail.com',

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, inject } from '@angular/core';
 import { Alumno } from 'src/app/interfaces/alumno.interface';
 
 import { AlumnosService } from 'src/app/servises/alumnos.service';
@@ -10,9 +11,14 @@ import { AlumnosService } from 'src/app/servises/alumnos.service';
 })
 export class ListaAlumnosComponent {
   alumnos: Alumno[] = [];
-constructor(private alumnosService: AlumnosService){}
+  alumnosService = inject(AlumnosService);
+constructor(/*private alumnosService: AlumnosService*/){}
 ngOnInit(): void{
   this.alumnos = this.alumnosService.getAll()
 
+}
+getDataCourse($event: any){
+  let course =$event.target.value;
+  this.alumnos = this.alumnosService.getByCourse(course);
 }
 }
