@@ -13,6 +13,7 @@ newAlumno: Alumno ={nombre:"", edad: 0, curso:"", email:""};
 alumnosSetvices = inject(AlumnosService);
 getData(): void{
 let response = this.alumnosSetvices.insert(this.newAlumno);
+this.newAlumno ={nombre:"", edad: 0, curso:"", email:""};
 if(response === 'error')
 {
   alert('No se ha podido insertar el usario')
