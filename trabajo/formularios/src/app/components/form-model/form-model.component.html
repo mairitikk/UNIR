@@ -18,10 +18,12 @@
     <div class="my-2">
         <label for="edad" class="form-label">Edad</label>
         <input class="form-control" type="number" id="edad" placeholder="tu edad" formControlName="edad">
+        <p class="error" *ngIf="checkControl('edad', 'edadvalidator')">{{formModel.get('edad')?.errors?.['edadvalidator']}}</p>
     </div>
     <div class="my-2">
         <label for="dni" class="form-label">DNI</label>
         <input class="form-control" type="text" id="dni" placeholder="tu dni" formControlName="dni">
+        <p class="error" *ngIf="checkControl('dni', 'dnivalidator')">{{formModel.get('dni')?.errors?.['dnivalidator']}}</p>
     </div>
     <div class="my-2">
         <label for="password" class="form-label">Password</label>
