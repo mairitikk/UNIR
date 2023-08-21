@@ -1,0 +1,40 @@
+<h1>Forms Model</h1>
+<hr>
+<section>
+<form [formGroup]="formModel" (ngSubmit)="getDataForm()">
+    <div class="my-2">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input class="form-control" type="text" id="nombre" placeholder="tu nombre" formControlName="nombre">
+    <p class="error" *ngIf="checkControl('nombre', 'required')"> Campo es recerido</p>
+    <p class="error" *ngIf="checkControl('nombre', 'minlength')"> Minimo 3 caracteres</p>
+    </div>
+    <div class="my-2">
+        <label for="email" class="form-label">Email</label>
+        
+    <input class="form-control" type="text" id="email" placeholder="tu email" formControlName="email">
+    <p class="error" *ngIf="checkControl('email', 'pattern')"> Email incorrecto</p>
+    <p class="error" *ngIf="checkControl('email', 'required')"> Campo es recerido</p>
+    </div>
+    <div class="my-2">
+        <label for="edad" class="form-label">Edad</label>
+        <input class="form-control" type="number" id="edad" placeholder="tu edad" formControlName="edad">
+    </div>
+    <div class="my-2">
+        <label for="dni" class="form-label">DNI</label>
+        <input class="form-control" type="text" id="dni" placeholder="tu dni" formControlName="dni">
+    </div>
+    <div class="my-2">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" type="password" id="password" placeholder="tu password" formControlName="password">
+    </div>
+    <div class="my-2">
+        <label for="repeatpassword" class="form-label">Repite Password</label>
+        <input class="form-control" type="password" id="repeatpassword" placeholder="repite tu password" formControlName="repeatpassword">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-danger" [disabled]="!formModel.valid">
+    
+
+
+</form>
+{{formModel.valid}}
+</section>

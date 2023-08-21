@@ -1,0 +1,21 @@
+<h1>Forn Template</h1>
+<hr>
+<section class="m-2">
+    <form #formTemplate="ngForm" (ngSubmit)="getDataTemplate(formTemplate)" class="card shadow p-3">
+        <div>
+            <label class="form-label" for="nombre">Nombre</label>
+            <input class="form-control" type="text" id="nombre" placeholder="escribe un nombre" name="nombre" ngModel>
+        </div>
+        <div>
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="text" id="email" placeholder="introduce un email" name="email" ngModel>
+        </div>
+        <div>
+            
+            <input type="checkbox" id="rgpd" name="rgpd" ngModel>He leido
+        </div>
+        <input class="btn btn-danger" type="submit" value="Enviar">
+    </form>
+</section>
+
+<p>{{objeto | json}}</p>
