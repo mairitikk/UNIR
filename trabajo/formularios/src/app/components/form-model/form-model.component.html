@@ -28,10 +28,12 @@
     <div class="my-2">
         <label for="password" class="form-label">Password</label>
         <input class="form-control" type="password" id="password" placeholder="tu password" formControlName="password">
+        <p class="error" *ngIf="formModel.hasError('checkpassword')">Los campos password y repite password </p>
     </div>
     <div class="my-2">
         <label for="repeatpassword" class="form-label">Repite Password</label>
         <input class="form-control" type="password" id="repeatpassword" placeholder="repite tu password" formControlName="repeatpassword">
+        <p class="error" *ngIf=""></p>
     </div>
     <input type="submit" value="Enviar" class="btn btn-danger" [disabled]="!formModel.valid">
     

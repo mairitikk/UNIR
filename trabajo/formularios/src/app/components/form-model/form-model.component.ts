@@ -13,6 +13,7 @@ export class FormModelComponent {
 
   constructor(){
   this.formModel = new FormGroup({
+    id: new FormControl("", []),
     nombre: new FormControl('', [
       Validators.required,
       Validators.minLength(3)
@@ -28,9 +29,32 @@ export class FormModelComponent {
     dni: new FormControl('', [
       this.dniValidator
     ]),
-    password: new FormControl('', []),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8)
+    ]),
     repeatpassword: new FormControl('', [])
-  }, []);
+  }, [this.checkPassword]);
+  
+}
+checkPassword(formValue: AbstractControl) {
+
+  const password: string = formValue.get('password')?.value
+
+  const repeatPassword: string = formValue.get('repeatpassword')?.value;
+
+
+
+  if (password !== repeatPassword) {
+
+    return { 'checkpassword': true }
+
+  } else {
+
+    return null
+
+  }
+
 }
 dniValidator(controlName: AbstractControl): any {
 
@@ -97,4 +121,21 @@ checkControl(formcontrolName: string, validator: string):boolean |undefined
 {
   return this.formModel.get(formcontrolName)?.hasError(validator) && this.formModel.get(formcontrolName)?.touched
 }
+//rellenar un formulario setValue() recibe un objeto json 
+//con los campos formulario
+ngOnInit(){
+  let obj = {
+    id: 1,
+    nombre: 'Mairi Tikk',
+    edad: 33,
+    email: 'mtikk@mtikk.com',
+    dni: '12345678Z',
+    password: '12345678',
+    repeatpassword: '12345678'
+  }
+  this.formModel.setValue(obj);
 }
+}
+
+
+
